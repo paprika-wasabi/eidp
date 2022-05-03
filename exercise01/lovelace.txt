@@ -1,0 +1,7 @@
+lovelace.txt
+
+ms2149 mi84 pw221
+
+Kurzbiografie Ada Lovelace
+
+Die Tochter des Dichters Lord Byron und der Mathematikerin Anne Noel-Byron kam am 10. Dezember 1815 in London zur Welt. Die Vision der Mutter war es, Ada als eine moderne Frau, entgegen der herkömmlichen poesieintensiven Weise, aufzuziehen. Deshalb begann sie früh mit Unterricht in Mathematik und Logik. Ihr Talent stellte sich schon früh, unter dem Auge von Augustus der Morgan, als außergewöhnlich heraus. Später wurde sie mit 17 Jahren, über ihren Tutor, Charles Babbage vorgestellt. Als Assistentin dieses Genies arbeiteten sie gemeinsam an Babbages' Erfindung des Analytical Engines. Nach Korrespondenz mit einem italienischen Wissenschaftlers, bat Babbage Ada das Skript zum weiteren Verständnis zu übersetzen. Dabei schrieb Ada Kommentare von a bis g und entwickelte somit eine eigene Sprache für dieses theoretische Modell, des Analytical Engines. Ada Lovelace ging mit dieser Idee zurück zu Babbage und bat ihn sie weiterzuführen um die Bernoulli Zahlenfolge kalkulieren zu können. Dies bildete den Grundstein für das erste Computerprogramm der Welt. In ihren Kommentaren hat sie auch geschrieben, wie zukünftige Anwendungsmöglichkeiten des Analytical Maschine aussehen könnten, wie zum Beispiel Graphen zu zeichnen. Auch beschrieben sie die Grenzen der Maschine beim Entwerfen einer künstlichen Intelligenz. Trotzdem war dieses Konzept die Geburtsstunde der Informatik und Ada ging als erste Programmiererin in die Geschichtsbücher ein.

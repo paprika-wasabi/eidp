@@ -1,0 +1,17 @@
+arithmetik.txt
+//(a) >>> from math import log2
+>>> res = int(log2(64)) + 2 ** abs(1+1j)
+Antwort: res ist float, weil es von abs(1+1j) addiert wurde.
+
+(b) >>> from math import sqrt, floor, ceil
+>>> res = floor(2.3 * 7) * ceil(2 ** 3 + 7.1)
+Antwort: res ist ein Integer, weil Minimum von 16.1 16 ist und auch Maximum von 15.1 16 ist.
+die Funktion floor und ceil geben die ganze Zahl raus.
+
+(c) >>> from math import pi, sin, cos, radians
+>>> res = cos(pi/4)**2 + sin(radians(45))**2j
+Antwort: res ist ein float und complex, weil das Ergebnis nicht nur von Cosinus und Sinus viel Decimalzahlen ausgibt,
+sondern auch Complexzahlen.
+
+(d) >>> res = 6 * round(2.1, 1) // 1
+Antwort: res ist float, weil die Funktion von Round nur eine bestimmte Decimalzahl definiert wurde.

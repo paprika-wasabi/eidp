@@ -1,0 +1,25 @@
+algorithms.txt
+
+a = int(input(""))
+b = int(input(""))
+k = 0
+while k < b:
+    a = a+b
+    if a % 2 == 0:
+        k=k+1
+    elif k >= b:
+        break
+print(a)
+
+Die Beschreibungen erfült 2 Eigenschaften.
+1.Präzision
+a und b wurden eindeutig positive Zahlen gegeben.
+2.nicht Effektivität
+Falls a nach dem Addieren ungerade ist,werde k niemals größer oder gleich b.
+Dann a wird nicht ausgegeben.
+3.Finitheit (statisch) 
+alle Beschreibungen wurde bestimmte Zahl und Berechnung gegeben.
+4.nicht Finiheit(dynamisch)und nicht Terminierung.
+Falls a nach dem Addieren ungerade ist,könnten alle Schritten nicht erledigt.
+Die Berechnung könnte nicht beendet werden. 
+Deswegen verbraucht die Beschreibung unendlich Speicher.

@@ -1,0 +1,59 @@
+from time import time
+import functools
+
+
+def cached(f):
+    cache = dict()
+
+    @functools.wraps(f)
+    def wrapper(x):
+        if x in cache:
+            return cache[x]
+        else:
+            y = f(x)
+            cache[x] = y
+            return y
+
+    return wrapper
+
+
+def timed(f):
+    def wrapper(*args, **kwargs):
+        t0 = time()
+        res = f(*args, **kwargs)
+        dt = time() - t0
+        return res, dt
+    wrapper.__name__ = f.__name__
+    wrapper.__doc__ = f.__doc__
+    return wrapper
+
+
+def fib_slow(n: int) -> int:
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return fib_slow(n - 1) + fib_slow(n - 2)
+
+
+@cached
+def fib_fast(n: int) -> int:
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return fib_fast(n - 1) + fib_fast(n - 2)
+
+
+def test_cached():
+    for i in range(15):
+        assert fib_slow(i) == fib_fast(i)
+
+
+if __name__ == '__main__':
+    for fib in [fib_fast, fib_slow]:
+        fib = timed(fib)
+        for x in [0, 1, 5, 15, 32]:
+            y, dt = fib(x)
+            print("{}({:2}) = {:>7} in {:<7.2} seconds.".format(fib.__name__, x, y, dt))
+        print("")

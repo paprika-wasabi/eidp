@@ -1,0 +1,36 @@
+from datetime import datetime
+
+T = int(input())
+di_li = []
+di = dict()
+
+assert (T) >= 1
+assert (T) <= 100000
+
+for p in range(T):
+    lz = input()
+    datew_in = input()
+    dateg_in = input()
+
+    datewd, datewm, datewy = map(int, datew_in.split())
+    dategd, dategm, dategy = map(int, dateg_in.split())
+
+    datew = datetime(datewy, datewm, datewd)
+    dateg = datetime(dategy, dategm, dategd)
+
+    di[p] = (datew.date(), dateg.date())
+
+for p, (datew, dateg) in di.items():
+    nr = p + 1
+    #age_year = datew.year - dateg.year
+    alter = datew.year - dateg.year - \
+            ((datew.month, datew.day) < (dateg.month, dateg.day))
+    if datew < dateg:
+        di_li.append("Person #{}: Ungueltiges Geburtsdatum".format(nr))
+    elif alter > 130:
+        di_li.append("Person #{}: Zu alt".format(nr))
+    else:
+        di_li.append("Person #{}: ".format(nr) + str(alter))
+
+for i in di_li:
+    print(i)
